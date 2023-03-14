@@ -1,0 +1,10 @@
+{% set groups_count = 100 %}
+
+{% set groups = h.get_featured_groups(groups_count) %}
+
+{% for group in groups %}
+  <div class="box">
+    {% snippet 'snippets/group_item.html', group=group, truncate=50, truncate_title=35 %}
+  </div>
+  <br />
+{% endfor %}

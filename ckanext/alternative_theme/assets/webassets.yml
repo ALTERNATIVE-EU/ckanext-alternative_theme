@@ -1,0 +1,14 @@
+# alternative_theme-js:
+#   filter: rjsmin
+#   output: ckanext-alternative_theme/%(version)s-alternative_theme.js
+#   contents:
+#     - js/alternative_theme.js
+#   extra:
+#     preload:
+#       - base/main
+
+# alternative_theme-css:
+#   filter: cssrewrite
+#   output: ckanext-alternative_theme/%(version)s-alternative_theme.css
+#   contents:
+#     - css/alternative_theme.css
