@@ -21,7 +21,7 @@ CKAN extension that changes the default theme of the platform to match the look 
 
 4. Add the extension to your list of plugins in the ckan config file (usually `/etc/ckan/default/ckan.ini`)
    ```
-   ckan.plugins = stats text_view recline_view ckanext-alternative_theme
+   ckan.plugins = stats text_view recline_view alternative_theme
    ```
 
 5. Start CKAN
