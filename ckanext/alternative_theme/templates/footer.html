@@ -10,8 +10,8 @@
                     {% endblock %}
                 </ul>
                 <ul class="list-unstyled">
-                    {% block footer_links_ckan %} {% set api_url = 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version) %}
-                    <li><a href="{{ api_url }}" target="_blank">{{ _('ALTERNATIVE API') }}</a></li>
+                    {% block footer_links_ckan %}
+                    <li><a href="https://github.com/ALTERNATIVE-EU/alternative.github.io" target="_blank">{{ _('ALTERNATIVE API') }}</a></li>
                     <li><a href="https://alternative-project.eu/" target="_blank">{{ _('ALTERNATIVE Project') }}</a></li>
                     <li>
                         <a href="http://www.opendefinition.org/okd/" target="_blank"><img src="{{ h.url_for_static('/base/images/od_80x15_blue.png') }}" alt="Open Data"></a>
@@ -24,7 +24,7 @@
                 {% block social_media %}
                 <b>Follow us:</b>
                 <br />
-                <a href="https://www.linkedin.com/in/project-alternative-732943223/" target="_blank"
+                <a href="https://www.linkedin.com/company/h2020-project-alternative/" target="_blank"
                     class="fa fa-linkedin fa-social-media" style="font-size: 30px;text-decoration: none;"></a>
                 <a href="https://twitter.com/EU_ALTERNATIVE" target="_blank" class="fa fa-twitter fa-social-media"
                     style="font-size: 30px;text-decoration: none;"></a>
