@@ -18,6 +18,13 @@ def user_list(context, data_dict=None):
         return {'success': False, 'msg': 'Only system administrators can see users'}
 
 
+def user_autocomplete(context, data_dict=None):
+    if authz.auth_is_loggedin_user():
+        return {'success': True}
+    else:
+        return {'success': False, 'msg': 'Only logged-in users can find users'}
+
+
 class AlternativeThemePlugin(plugins.SingletonPlugin):
     '''An example theme plugin.
 
@@ -40,4 +47,7 @@ class AlternativeThemePlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IAuthFunctions)
 
     def get_auth_functions(self):
-        return {'user_list': user_list}
+        return {
+            'user_list': user_list,
+            'user_autocomplete': user_autocomplete
+        }
