@@ -18,11 +18,16 @@
                   <span class="username">{{ c.userobj.display_name }}</span>
                 </a>
                 </li>
-                <li>
-                    <a href="{{ h.url_for('keycloak_auth.jupyterhub_login') }}" target="_blank" class="image" title="{{ _('Go to Jupyterhub') }}">
-                        <span class="jupyterhub-header">Jupyterhub</span>
-                    </a>
-                </li>
+
+                {% if c.userobj.plugin_extras and 'keycloak_plugin' in c.userobj.plugin_extras and 'roles_extra' in c.userobj.plugin_extras.keycloak_plugin %}
+                    {% if 'jupyterhub-user' in c.userobj.plugin_extras.keycloak_plugin.roles_extra %}
+                        <li>
+                            <a href="{{ h.url_for('keycloak_auth.jupyterhub_login') }}" target="_blank" class="image" title="{{ _('Go to Jupyterhub') }}">
+                                <span class="jupyterhub-header">Jupyterhub</span>
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endif %}
                 {% set new_activities = h.new_activities() %}
                 <li class="notifications {% if new_activities > 0 %}notifications-important{% endif %}">
                     {% set notifications_tooltip = ngettext('Dashboard (%(num)d new item)', 'Dashboard (%(num)d new items)', new_activities) %}
