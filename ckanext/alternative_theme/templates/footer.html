@@ -6,12 +6,12 @@
                 {% block footer_nav %}
                 <ul class="list-unstyled">
                     {% block footer_links %}
-                    <li><a href="{{ h.url_for(controller='home', action='about') }}">{{ g.site_title }} CDP</a></li>
+                    <li><a href="https://github.com/ALTERNATIVE-EU" target="_blank">{{ _('ALTERNATIVE GitHub') }}</a></li>
                     {% endblock %}
                 </ul>
                 <ul class="list-unstyled">
                     {% block footer_links_ckan %}
-                    <li><a href="https://github.com/ALTERNATIVE-EU/alternative.github.io" target="_blank">{{ _('ALTERNATIVE API') }}</a></li>
+                    <li><a href="https://alternative-eu.github.io/alternative.github.io" target="_blank">{{ _('Platform Documentation') }}</a></li>
                     <li><a href="https://alternative-project.eu/" target="_blank">{{ _('ALTERNATIVE Project') }}</a></li>
                     <li>
                         <a href="http://www.opendefinition.org/okd/" target="_blank"><img src="{{ h.url_for_static('/base/images/od_80x15_blue.png') }}" alt="Open Data"></a>
